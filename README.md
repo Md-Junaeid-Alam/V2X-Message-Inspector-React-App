@@ -1,16 +1,52 @@
-# React + Vite
+# V2X Message Inspector & Fleet Console
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+> 🚧 **Status: Work in Progress** — this project is under active development. Features, architecture, and UI are evolving as it's built out phase by phase.
 
-Currently, two official plugins are available:
+A React-based tool for inspecting, filtering, and analyzing simulated V2X (Vehicle-to-Everything) messages — Basic Safety Messages (BSMs), misbehavior reports, and signal phase messages — in a live, interactive console. Think of it as a lightweight "Wireshark for V2X," built to explore message streams, flag anomalies, and visualize fleet-wide risk in real time.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+This project is being built as a hands-on way to demonstrate practical React proficiency (hooks, state architecture, performance patterns, custom hooks, routing, testing) within a real automotive/V2X domain context, alongside related work on [VehicleLink Gateway](https://github.com/Md-Junaeid-Alam/VehicleLink-Gateway).
 
-## React Compiler
+## Planned Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- [ ] Simulated V2X message stream (BSMs, misbehavior reports, signal phase messages)
+- [ ] Live message feed with filtering and flagging
+- [ ] Intersection/map view showing vehicle positions and status
+- [ ] Per-vehicle detail view with message history
+- [ ] Risk/anomaly scoring and analytics dashboard
+- [ ] Scenario builder for injecting custom vehicles and anomalies
 
-## Expanding the Oxlint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+- **React** + **Vite**
+- **React Router** for navigation (`/`, `/vehicle/:id`, `/analytics`)
+- **Zustand** for live fleet/message state
+- **TanStack Query** for any async/server-derived data
+- **TypeScript** (in progress)
+- **Vitest** + **React Testing Library** for testing
+
+## Project Structure
+
+```
+src/
+  app/          # composition root: App.jsx, routes, providers
+  features/     # feature-based modules (console, vehicle-detail, analytics)
+  shared/       # reusable components and hooks
+  store/        # Zustand stores
+  main.jsx
+  index.css
+```
+
+## Getting Started
+
+```bash
+npm install
+npm run dev
+```
+
+## Roadmap
+
+This project is being developed incrementally across several phases, covering core React fundamentals through advanced patterns (custom hooks, performance optimization, testing, and TypeScript). Commit history reflects this phased approach.
+
+---
+
+*Part of an ongoing portfolio of V2X/automotive cybersecurity projects, alongside [VehicleLink Gateway](https://github.com/Md-Junaeid-Alam/VehicleLink-Gateway).*
