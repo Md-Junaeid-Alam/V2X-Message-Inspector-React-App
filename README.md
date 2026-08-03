@@ -1,4 +1,4 @@
-# V2X Message Inspector & Fleet Console
+# V2X Message Inspector & Fleet
 
 > 🚧 **Status: Work in Progress** — this project is under active development. Features, architecture, and UI are evolving as it's built out phase by phase.
 
